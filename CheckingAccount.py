@@ -15,7 +15,7 @@ class CheckingAccount:
             print(f"{amount: .2f} was removed from your account balance.\n")
         
         elif amount >= self.__balance:
-            print("Insufficent funds in account.")
+            print("Insufficent funds in account.\n")
 
     def check_balance(self):
         print(f"Your account balance is {self.__balance: .2f}\n")
@@ -25,7 +25,10 @@ def main():
 
     myAccount.debit(1000)
     myAccount.debit(150000)
+    myAccount.check_balance()
     myAccount.credit(150000)
+    myAccount.check_balance()
+    myAccount.credit(1050.00)
     myAccount.check_balance()
 
 main()
